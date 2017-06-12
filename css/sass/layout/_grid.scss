@@ -1,0 +1,40 @@
+/* @include width-calc(100%, 40px, 95%); */
+.row1{
+	height: #{$cellspace}px;
+}
+
+.row2{
+	height: #{$cellspace * 2}px;
+}
+
+.row3{
+	height: #{$cellspace * 3}px;
+}
+
+.row4{
+	height: #{$cellspace * 4}px;
+}
+
+.row8{
+	height: #{$cellspace * 8}px;
+}
+
+.col1{
+	width: #{$cellspace}px;
+}
+
+.col2{
+	width: #{$cellspace * 2}px;
+}
+
+.col3{
+	width: #{$cellspace * 3}px;
+}
+
+.col4{
+	width: #{$cellspace * 4}px;
+}
+
+.col16{
+	width: #{$cellspace * 16}px;
+}

@@ -1,0 +1,27 @@
+<div class="main-content" ng-show="!compController.Loading">
+    <ul class="comp-list list-group">
+        <li class="list-group-item" ng-repeat="comp in compController.Competitions" ng-class="{current: comp.IsCurrent, closed: comp.IsClosed}">
+            <span class="comp-name" ng-bind="comp.Name"></span>
+            <div class="comp-actions">
+                <button type="button" class="glyphicon glyphicon-edit comp-action" ng-click="compController.EditComp(comp.Id)"></button>
+                <button type="button" class="glyphicon glyphicon-remove comp-action" ng-click="compController.DeleteComp(comp.Id)"></button>
+            </div>
+        </li>
+    </ul>
+    <div class="add-comp" ng-class="compController.AddComp.State">
+        <img class="loading" src="" ng-if="compController.AddComp.State == 'pending'" />
+        <form class="add-form" ng-if="compController.AddComp.State == 'adding'">
+            <div class="form-row">
+                <label>Competition Name</label>
+                <input class="form-control" ng-model="compController.AddComp.Form.Name"/>
+            </div>
+            <div class="form-row">
+                <button class="btn btn-primary submit-action" ng-click="compController.AddComp.Execute()">Add</button>
+            </div>
+        </form>
+        <button class="toggle-form glyphicon glyphicon-plus" ng-if="compController.AddComp.State == 'addable'" ng-click="compController.AddComp.ActivateForm()"></button>
+    </div>
+</div>
+<div class="main-content" ng-show="compController.Loading">
+    <img class="loading" src="../voter/images/loading.gif"/>
+</div>

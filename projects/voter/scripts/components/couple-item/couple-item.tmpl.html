@@ -1,0 +1,18 @@
+<div class="couple-view" ng-show="!editMode">
+    <p class="couple-content partner" ng-bind="couple.Partner1"></p>
+    <span class="couple-content divider">&</span>
+    <p class="couple-content partner" ng-bind="couple.Partner2"></p>
+    <div class="couple-actions">
+        <button class="action glyphicon glyphicon-edit" ng-click="toggleEdit()"></button>
+        <button class="action glyphicon glyphicon-remove" ng-click="deleteItem()"></button>
+    </div>
+</div>
+<div class="couple-edit" ng-show="editMode">
+    <input class="couple-content partner-input" ng-model="form.partner1" />
+    <span class="couple-content divider">&</span>
+    <input class="couple-content partner-input" ng-model="form.partner2" />
+    <div class="couple-actions">
+        <button class="action glyphicon glyphicon-floppy-save" ng-click="saveChanges()"></button>
+        <button class="action glyphicon glyphicon-remove" ng-click="cancelChanges()"></button>
+    </div>
+</div>

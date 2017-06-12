@@ -1,0 +1,16 @@
+<div class="main-content scoreboard-area" ng-show="!scoreboardController.Loading">
+    <nav class="admin-nav" admin-nav></nav>
+    <h2>Scoreboard</h2>
+    <ul class="list-group scoreboard">
+        <li class="list-group-item" ng-repeat="(key, placement) in scoreboardController.Placements">
+            <span class="list-label" ng-bind="key"></span>
+            <ul class="list-values">
+                <li class="list-value" ng-repeat="couple in placement.couples" ng-bind="couple.partner1 + ' & ' + couple.partner2"></li>
+            </ul>
+            <span class="list-secondary-value" ng-bind="placement.votes"></span>
+        </li>
+    </ul>
+</div>
+<div class="main-content" ng-show="scoreboardController.Loading">
+    <img class="loading" src="../voter/images/loading.gif"/>
+</div>

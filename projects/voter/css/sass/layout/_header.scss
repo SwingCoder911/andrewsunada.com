@@ -1,0 +1,36 @@
+.header{
+	width: 100%;
+    height: 71px;
+    background: #F5F5F5;
+    overflow: hidden;
+}
+
+.header h1{
+	height: 100%;
+	line-height: 65px;
+	text-align: center;
+}
+
+@media only screen and (min-width: 700px) {
+	.header h1{
+    	text-align: left;
+	    width: 85%;
+	    margin: 0 auto;
+	    overflow: hidden;
+	}
+}
+
+.header h1 a{
+    color: #555;
+    line-height: 50px;
+    text-decoration: none;
+    font-size: 36px;
+    margin-top: 12px;
+    display: block;
+}
+
+.header img{
+	height: 50px;
+	margin: 5px 0;
+	float: left;
+}

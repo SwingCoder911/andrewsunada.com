@@ -1,0 +1,34 @@
+<div class="main-content admin-area" ng-show="!competitionController.Loading">
+    <nav class="admin-nav" admin-nav></nav>
+    <h2 ng-bind="competitionController.Competition.Name" class="comp-name"></h2>
+    <div class="btn-area">
+        <button type="button" class="btn btn-default" ng-click="competitionController.CloseCompetition()" ng-show="!competitionController.Competition.IsClosed">Close Competition</button>
+        <button type="button" class="btn btn-default" ng-click="competitionController.OpenCompetition()" ng-show="competitionController.Competition.IsClosed">Open Competition</button>
+    </div>
+    <ul class="couples-list">
+        <li class="couple" ng-repeat="couple in competitionController.Competition.Couples" couple-item="couple"></li>
+    </ul>
+    <div class="add-couple" ng-class="competitionController.AddCouple.State">
+        <img class="loading" src="" ng-if="competitionController.AddCouple.State == 'pending'" />
+        <form class="add-form" ng-if="competitionController.AddCouple.State == 'adding'">
+            <div class="form-row">
+                <label>Partner 1</label>
+                <input class="form-control" ng-model="competitionController.AddCouple.Form.Partner1"/>
+            </div>
+            <div class="form-row">
+                <label>Partner 2</label>
+                <input class="form-control" ng-model="competitionController.AddCouple.Form.Partner2"/>
+            </div>
+            <div class="form-row" ng-show="competitionController.AddCouple.Error != false">
+                <p class="error" ng-bind="competitionController.AddCouple.Error"></p>
+            </div>
+            <div class="form-row">
+                <button class="btn btn-primary submit-action" ng-click="competitionController.AddCouple.Execute()">Add</button>
+            </div>
+        </form>
+        <button class="toggle-form glyphicon glyphicon-plus" ng-if="competitionController.AddCouple.State == 'addable'" ng-click="competitionController.AddCouple.ActivateForm()"></button>
+    </div>
+</div>
+<div class="main-content" ng-show="competitionController.Loading">
+    <img class="loading" src="../voter/images/loading.gif"/>
+</div>

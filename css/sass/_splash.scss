@@ -1,0 +1,27 @@
+body.splash{
+	background:	url("/images/backgrounds/batman-2d.png") #000 no-repeat;
+	background-size: cover;
+}
+section.splash-area{
+	margin: 200px auto;
+	overflow: hidden;
+
+	@media screen and (max-width: 34em){
+		margin: 0 auto 0;
+		height: 85vh;
+	}
+	p{
+		color: #fff;
+		text-align: center;
+
+		&.primary{
+			font-size: 40px;
+			margin-top: 80px;
+			font-family: 'Open Sans', sans-serif;
+		}
+
+		&.secondary{
+			font-size: 24px;
+		}
+	}
+}

@@ -1,0 +1,88 @@
+body, p, a, ul{
+	margin: 0px;
+	padding: 0px;
+	font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+}
+
+ul{
+	list-style-type: none;
+}
+
+body{
+	background:
+	url('../images/backgrounds/batman-moon-resize.jpg')
+	center center / 1920px 1080px
+	no-repeat
+	fixed
+	#000;
+}
+
+.row4{
+	height: 120px;
+}
+
+.col4{
+	width: 120px;
+}
+
+header{
+	width: 840px;
+	height: 80px;
+	margin: 0px auto;
+	border-bottom: 2px solid #fff;
+}
+
+header p{
+	color: #fff;
+	font-size: 40px;
+	line-height: 85px;
+	text-align: center;
+	text-transform: uppercase;
+}
+
+section{
+	width: 850px;
+	margin: 0px auto;
+	min-height: 500px;
+}
+
+section ul{
+	padding: 30px 60px;
+}
+
+section ul li{
+	display: inline-block;
+	margin: 60px;
+}
+
+section ul li a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+section ul li a:hover{
+	background: rgba(0,0,0,.7);
+}
+
+section ul li a img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+
+
+section ul li a.checkout{
+	background: rgba(255,255,255,1);
+	padding: 5px;
+	width: calc(100% - 5px);
+	height: calc(100% - 5px);
+}
+
+.findmystrictly img{
+	background: #FFF;
+}
+.euler img{
+	background: #FFF;
+}
