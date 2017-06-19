@@ -11,12 +11,15 @@
 	</head>
 	<body class="splash">
 		<header class="header">
-			<div class="top-row social-container"></div>
-			<nav class="top-row nav-container"></nav>
+			<h1>Andrew Sunada</h1>
 		</header>
 		<section class="splash-area">
 			<p class="primary">Welcome to the my Bat Cave.</p>
 			<p class="secondary">Welcome to the Elephant in the room.</p>
+			<a class="focus" href="/Resume.pdf" target="_blank">Resume</a>
 		</section>
+		<footer class="footer">
+			<div class="social-container"></div>
+		</footer>
 	</body>
 </html>

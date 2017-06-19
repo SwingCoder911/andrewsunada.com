@@ -2,6 +2,7 @@ header{
 	@include width-calc(100%, 80px, 80%);
 	padding: 0px 40px;
 	overflow: hidden;
+	color: #FFF;
 
 	@media screen and (max-width: 34em){
 		width: 100%;
@@ -9,107 +10,8 @@ header{
 		padding: 0;
 	}
 
-	.top-row{
-		height: 100%;
-	}
-
-	.top-row ul{
-		margin-top: 40px;
-
-		li{
-			display: block;
-			float: left;
-			height: 100%;
-
-			a{
-				display: block;
-				height: 100%;
-				color: $primary-colour;
-				text-decoration: none;
-				line-height: 40px;
-
-				img{
-					display: block;
-					width: 100%;
-					height: 100%;
-				}
-			}
-		}
-	}
-
-	.social-container{
-		float: left;
-		@media screen and (max-width: 34em){
-			display: none;
-		}
-		ul li{
-			margin-right: 20px;
-		}
-	} 
-
-	.nav-container{
-		float: right;
-		.nav-icon{
-			display: none;
-			height: 50px;
-			margin: 1em;
-			@media screen and (max-width: 34em){
-				display: block;
-			}	
-		}
-		.close-icon{
-			display: none;
-			height: 50px;
-			margin: 2em 0;
-		}
-		.nav-row{
-			display: block;
-			margin-right: 80px;
-			@media screen and (max-width: 34em){
-				display: none;
-			}
-		}
-		a:hover{
-			color: #0D252F;
-			background: #81938B;
-		}
-
-		&.active{
-			float: none;
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100vw;
-			height: 100vh;
-			background: $primary-colour;
-
-			.nav-container{
-				a{
-					color: #FFF;
-				}
-			}
-			.nav-icon{
-				display: none;
-			}
-			.close-icon{
-				display: block;
-				float: right;
-				margin: 1em;
-			}
-			.nav-row{
-				width: 100%;
-				display: block;
-				li{
-					width: 100%;
-				}
-				a{
-					color: #FFF;	
-				}				
-			}
-		}
-	}
-
-	.nav-container a{
+	h1{
 		text-align: center;
 	}
+
 }

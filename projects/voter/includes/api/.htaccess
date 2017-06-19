@@ -1,9 +1,0 @@
-
-# BEGIN WordPress
-#<IfModule mod_rewrite.c>
-#RewriteEngine On
-#RewriteBase /
-#RewriteRule ^(.*)$ /call.php [NC,P]
-#</IfModule>
-
-# END WordPress
