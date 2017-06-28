@@ -2,8 +2,20 @@
 <html>
   <head>
     <title>Interview playground</title>
-    <script type="text/javascript" src="scripts/playground.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="styles/playground.css" />
   </head>
   <body>
+    <div id="loader"></div>
+    <script type="text/html" id="list-template">
+      <ul class="loading-container">
+      </ul>
+    </script>
+    <script type="text/html" id="list-item-template">
+      <li class="loading-item">
+        Hello world!
+      </li>
+    </script>
+    <script type="text/javascript" src="scripts/playground.js"></script>
   </body>
 </html>

@@ -1,10 +1,14 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Open Sans', sans-serif; }
+
 p, li, ul {
   margin: 0px;
   padding: 0px; }
 
 p, li, a {
-  font-size: 16px;
-  font-family: Sans-Serif; }
+  font-size: 16px; }
 
 ul {
   list-style-type: none; }
@@ -12,83 +16,123 @@ ul {
 .clear {
   clear: both; }
 
-.left {
-  float: left; }
+/* @include width-calc(100%, 40px, 95%); */
+.row1 {
+  height: 40px; }
 
-.right {
-  float: right; }
+.row2 {
+  height: 80px; }
 
-body {
-  width: 100%;
-  height: 100%;
-  margin: 0px;
-  padding: 0px; }
+.row3 {
+  height: 120px; }
 
-body.splash {
-  background: #fff; }
+.row4 {
+  height: 160px; }
 
-div.top-row {
-  height: 50px;
-  position: relative; }
+.row8 {
+  height: 320px; }
 
-div.top-row .social {
-  display: block;
-  float: left;
-  width: 50px;
-  height: 100%;
-  margin: 0px 10px; }
+.col1 {
+  width: 40px; }
 
-div.top-row .social img {
-  width: 100%;
-  height: 100%; }
+.col2 {
+  width: 80px; }
 
-div.top-row.right {
-  width: 250px; }
+.col3 {
+  width: 120px; }
 
-div.top-row .list-header {
+.col4 {
+  width: 160px; }
+
+.col16 {
+  width: 640px; }
+
+header {
+  width: 80%;
+  width: -webkit-calc(100% - 80px);
+  width: -moz-calc(100% - 80px);
+  width: calc(100% - 80px);
+  padding: 0px 40px;
+  overflow: hidden;
+  color: #FFF; }
+  @media screen and (max-width: 34em) {
+    header {
+      width: 100%;
+      height: 15vh;
+      padding: 0; } }
+  header h1 {
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: normal; }
+
+.footer {
   position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 95%;
-  width: -webkit-calc(100% - 40px);
-  width: -moz-calc(100% - 40px);
-  width: calc(100% - 40px);
-  height: 95%;
-  height: -webkit-calc(100% - 20px);
-  height: -moz-calc(100% - 20px);
-  height: calc(100% - 20px);
-  background: rgba(0, 0, 0, 0.3);
-  text-align: center;
-  padding: 10px 20px;
-  font-size: 20px;
-  cursor: pointer;
-  z-index: 0; }
-
-div.top-row ul.list-content {
-  position: absolute;
-  top: 0px;
-  right: 0px;
-  width: 95%;
-  width: -webkit-calc(100% - 40px);
-  width: -moz-calc(100% - 40px);
-  width: calc(100% - 40px);
-  background: #ccc;
-  padding: 10px 20px;
-  font-size: 20px;
-  cursor: pointer; }
-
-div.top-row ul.list-content li {
-  height: 95%;
-  height: -webkit-calc(50px - 20px);
-  height: -moz-calc(50px - 20px);
-  height: calc(50px - 20px);
+  bottom: 0;
+  left: 0;
   width: 100%; }
 
-div.top-row .list-content.hide {
-  display: none; }
+.social-container {
+  width: 80%;
+  width: -webkit-calc(100% - 80px);
+  width: -moz-calc(100% - 80px);
+  width: calc(100% - 80px);
+  color: #FFF;
+  margin: 0 40px; }
+  @media screen and (max-width: 34em) {
+    .social-container {
+      display: none; } }
+  .social-container ul {
+    display: block;
+    width: 100%;
+    text-align: center; }
+    .social-container ul li {
+      display: inline-block;
+      margin: 0 1.5em; }
+      .social-container ul li img {
+        display: inline-block;
+        width: 5rem;
+        height: 5rem; }
 
-div.top-row .list-content.show {
-  display: block;
-  z-index: 10; }
+body.splash {
+  background: url("/images/backgrounds/batman-minimalist.png") #000 no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  position: relative; }
+
+section.splash-area {
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center; }
+  @media screen and (max-width: 34em) {
+    section.splash-area {
+      margin: 0 auto 0;
+      height: 85vh; } }
+  section.splash-area p {
+    color: #fff; }
+    section.splash-area p.primary {
+      font-size: 40px;
+      margin-top: 80px; }
+    section.splash-area p.secondary {
+      font-size: 24px; }
+  section.splash-area .focus {
+    font-size: 24px;
+    color: #B69E6D;
+    text-decoration: none; }
+    section.splash-area .focus:hover {
+      text-decoration: underline; }
+
+div.center {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 5px 0px;
+  width: 100%; }
+
+.center .inner-content {
+  margin: 0px auto;
+  color: #ccc;
+  width: 50%; }
+
+.center .inner-content-image {
+  text-align: center; }
 
 /*# sourceMappingURL=universal.css.map */

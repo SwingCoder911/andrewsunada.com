@@ -1,0 +1,38 @@
+body.splash{
+	background:	url("/images/backgrounds/batman-minimalist.png") #000 no-repeat;
+	background-size: cover;
+	background-position: center;
+	height: 100vh;
+	position: relative;
+}
+section.splash-area{
+	margin: 0 auto;
+	overflow: hidden;
+	text-align: center;
+
+	@media screen and (max-width: 34em){
+		margin: 0 auto 0;
+		height: 85vh;
+	}
+	p{
+		color: #fff;
+
+		&.primary{
+			font-size: 40px;
+			margin-top: 80px;
+		}
+
+		&.secondary{
+			font-size: 24px;
+		}
+	}
+	.focus{
+		font-size: 24px;
+		color: $primary-colour-complement;
+		text-decoration: none;
+
+		&:hover{
+			text-decoration: underline;
+		}
+	}
+}

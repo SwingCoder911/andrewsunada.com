@@ -1,5 +1,2 @@
 RewriteEngine On
-#RewriteCond %{REQUEST_FILENAME} !-f
-RewriteRule ^interview-playground/(.*)$ /projects/interview-playground/$1 [R=301,NC,L]
-
-#RewriteRule ^(.*)$ /index.php?rt=$ [L,QSA]
+RewriteRule ^interview-playground/(.*)$ /projects/interview-playground/$1 [L]

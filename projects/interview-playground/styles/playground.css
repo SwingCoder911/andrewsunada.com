@@ -1,0 +1,14 @@
+ul{
+  list-style-type: none;
+  width: 500px;
+  overflow: hidden;
+  background: black;
+  padding: 0;
+}
+
+ul li{
+  float: left;
+  display: inline-block;
+  height: 100px;
+  background: red;
+}

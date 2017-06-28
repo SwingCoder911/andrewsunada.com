@@ -7,12 +7,9 @@
 		<script type="text/javascript" src="/js/underscore.dev.js"></script>
 		<script type="text/javascript" src="/js/backbone.dev.js"></script>
 		<script type="text/javascript" src="/js/splash.js"></script>
-		<link rel="stylesheet" type="text/css" href="/css/stylesheets/universal.css" />
+		<link rel="stylesheet" type="text/css" href="/css/universal.css" />
 	</head>
 	<body class="splash">
-		<header class="header">
-			<h1>Andrew Sunada</h1>
-		</header>
 		<section class="splash-area">
 			<p class="primary">Welcome to the my Bat Cave.</p>
 			<p class="secondary">Welcome to the Elephant in the room.</p>
