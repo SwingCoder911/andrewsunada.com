@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Weather App</title>
+    <base href="/projects/weather-app/" />
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/weather.css" />
+    <script type="text/javascript" src="scripts/WeatherApiService.js"></script>
+    <script type="text/javascript" src="scripts/WeatherLocation.js"></script>
+    <script type="text/javascript" src="scripts/WeatherController.js"></script>
+    <script type="text/javascript" src="scripts/WeatherViewController.js"></script>
+    <script type="text/javascript" src="scripts/App.js"></script>
+  </head>
+  <body ng-app="WeatherApp" ng-controller="WeatherController as ctrl">
+    <h1 class="header">Weather Compare</h1>
+    <section class="page-content">
+      <weather-view temperature="ctrl.WeatherATemp" class="page-content-item weather-view"></weather-view>
+      <p class="page-content-item difference"><span ng-bind="ctrl.TemperatureDifference"></span><span ng-hide="ctrl.TemperatureDifference == ''">&#176;F</span></p>
+      <weather-view temperature="ctrl.WeatherBTemp" class="page-content-item weather-view"></weather-view>
+    </section>
+  </body>
+</html>

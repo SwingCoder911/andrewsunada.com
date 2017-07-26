@@ -1,0 +1,24 @@
+<form name="form" class="form form-group" novalidate ng-show="ctrl.EditMode && !ctrl.Loading">
+  <label class="update-label">Find some weather</label>
+  <div class="input-container">
+    <input class="form-control update-input" maxlength="5" placeholder="Enter a zipcode..." type="text" name="zip" ng-model="zip" required ng-pattern="/[0-9]{5}/">
+    <span ng-show="form.zip.$invalid && !form.zip.$pristine && form.$submitted" class="error">Please enter a valid zipcode.</span>
+  </div>
+  <button class="btn btn-primary update-action" type="submit" ng-click="ctrl.UpdateZipcode(form)">Update Zipcode</button>
+</form>
+<div class="weather-display" ng-show="!ctrl.EditMode && !ctrl.Loading">
+  <div class="display-content" ng-show="ctrl.Weather.Error != ''">
+    <button class="glyphicon glyphicon-pencil edit-icon" ng-click="ctrl.ToggleEditMode()"></button>
+    <p class="not-found" ng-show="ctrl.Weather.Error != ''" ng-bind="ctrl.Weather.Error"></p>
+  </div>
+  <div class="display-content" ng-show="ctrl.Weather.Error == ''">
+    <button class="glyphicon glyphicon-pencil edit-icon" ng-click="ctrl.ToggleEditMode()"></button>
+    <img class="weather-item weather-icon" ng-src="{{ctrl.Weather.Icon}}" alt="Weather" />
+    <p class="weather-item location" ng-bind="ctrl.Weather.Location"></p>
+    <p class="weather-item temperature"><span ng-bind="ctrl.Weather.Temperature"></span><span>&#176;F</span></p>
+    <p class="weather-item status" ng-bind="ctrl.Weather.Status"></p>
+  </div>
+</div>
+<div class="loading-container" ng-show="ctrl.Loading">
+  <img class="loading" src="images/loading.gif" />
+</div>

@@ -1,0 +1,37 @@
+<div ng-if="row.type === 'input'" class="input-container">
+	<p class="label column3"><span ng-show="row.required" class="required">*</span>{{row.label}}</p>
+	<input class="value" ng-model="row.value" name="{{row.name}}" ng-class="widthClass" ng-required="row.required" ng-disabled="row.disabled" />
+	<p class="error-message" ng-show="form[row.name].$error.required && form.$submitted">{{row.label}} is required</p>
+</div>
+<div ng-if="row.type === 'email'" class="input-container">
+	<p class="label column3"><span ng-show="row.required" class="required">*</span>{{row.label}}</p>
+	<input class="value" type="email" ng-model="row.value" name="{{row.name}}" ng-class="widthClass" ng-required="row.required" ng-disabled="row.disabled"/>
+	<p class="error-message" ng-show="form[row.name].$error.required && form.$submitted">{{row.label}} is required</p>
+	<p class="error-message" ng-show="form[row.name].$error.email && form.$submitted">Email must be valid</p>
+</div>
+<div ng-if="row.type === 'checkbox'" class="input-container">
+	<p class="label column3">{{row.label}}</p>
+	<input class="value" type="checkbox" ng-model="row.value" />
+</div>
+<div ng-if="row.type === 'submit'" class="input-container">
+	<submit class="column3" ng-click="buttonAction(form)">{{row.label}}</submit>
+</div>
+<div ng-if="row.type === 'final-submit'" class="input-container">
+	<submit class="column3 final-submit" ng-click="buttonAction(form)">{{row.label}}</submit>
+</div>
+<div ng-if="row.type === 'button'" class="input-container">
+	<button class="column6 row-button" ng-click="buttonAction($index)" ng-class="row.selected ? 'selected' : ''"><span >{{row.label}}</span><span ng-show="undefined !== row.price"> | {{row.price}}</span></button>
+</div>
+<div ng-if="row.type === 'dropdown'" class="input-container">
+	<p class="label column3"><span ng-show="row.required" class="required">*</span>{{row.label}}</p>
+	<select class="column3" ng-model="row.value" name="{{row.name}}" ng-options="item for item in row.list" ng-required="row.required"></select>
+	<p class="error-message" ng-show="form[row.name].$error.required && form.$submitted">{{row.label}} is required</p>
+</div>
+<div ng-if="row.type === 'input-list'" class="input-container">
+	<div class="input-list-item cell{{$index}}" ng-repeat="item in row.list">
+		<p class="label column1"><span ng-show="item.required" class="required">*</span>{{item.label}}</p>
+		<input class="value" ng-model="item.value" name="{{item.name}}" ng-class="widthClass" ng-required="item.required" ng-disabled="item.disabled" placeholder="{{item.placeholder}}"/>
+		<p class="error-message" ng-show="form[item.name].$error.required && form.$submitted">Required</p>
+	</div>
+</div>
+

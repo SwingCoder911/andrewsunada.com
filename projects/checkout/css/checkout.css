@@ -1,0 +1,205 @@
+body{
+	margin: 0px;
+}
+p, ul, h1, submit{
+	margin: 0px;
+	padding: 0px;
+	font-family: arial, sans-serif;
+}
+
+.clear{
+	clear: both;
+}
+
+ul{
+	list-style-type: none;
+}
+
+header{
+	width: 100%;
+	height: 60px;
+	padding: 10px;
+}
+
+header img{
+	display: block;
+	height: 60px;
+}
+
+.git-image{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 80px;
+	width: 80px;
+}
+
+.git-image img{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+nav{
+	width: 100%;
+	height: 60px;
+	background: #00A0E9;
+}
+
+nav > ul{
+	width: 720px;
+	margin: 0px auto;
+	height: 100%;
+}
+
+nav > ul > li{
+	display: block;
+	float: left;
+	width: 180px;
+	height: 100%;
+	color: #fff;
+	line-height: 60px;
+	text-align: center;
+}
+
+nav > ul > li.selected{
+	background: #13235B;
+}
+
+section{
+	width: 100%;
+}
+
+section .form{
+	margin: 60px auto;
+	width: 720px;
+	background: #00A0E9;
+	color: #fff;
+	padding: 15px 0px;
+}
+
+section .form .form-row{
+	margin: 15px 0px;
+	float: left;
+	width: 100%;
+}
+
+section .form .form-row .column1{
+	width: 60px;
+}
+
+section .form .form-row .column2{
+	width: 120px;
+}
+
+section .form .form-row .column3{
+	width: 180px;
+}
+
+section .form .form-row .column6{
+	width: 360px;
+}
+
+section .form .form-row .label, section .form .form-row .value{
+	display: inline-block;
+}
+
+section .form .form-row .label{
+	text-align: right;
+}
+
+section .form .form-row .value{
+	border: none;
+}
+
+section .form .form-row submit{
+	background: #13235B;
+	border: none;
+	color : #fff;
+	margin-left: 185px;
+	padding: 7px 0px;
+	cursor: pointer;
+	display: block;
+	text-align: center;
+}
+
+section .form .form-row .row-button{
+	background: #13235B;
+	border: none;
+	color : #fff;
+	margin-left: 185px;
+	padding: 14px 0px;
+	cursor: pointer;
+}
+
+section .form .form-row .row-button span{
+	display: inline-block;
+
+}
+
+section .form .form-row .row-button span:first-child{
+	text-align: right;
+	width: 30%;
+	margin-right: 3px;
+	font-weight: bold;
+}
+
+section .form .form-row .row-button span:last-child{
+	text-align: left;
+	width: 50%;
+}
+
+section .form .form-row .row-button.selected{
+	background: #77DD77;
+  	color: #13235B;
+}
+
+section .form .form-row .final-submit{
+	background: #77DD77;
+}
+
+
+/* Form validation */
+
+section .form .form-row .ng-invalid-required.ng-touched, section .form .form-row .ng-invalid-email.ng-touched{
+	border: 2px solid #E60012;
+}
+
+section .form .form-row .input-container{
+	position: relative;
+}
+
+section .form .form-row .input-container .input-list-item{
+	display: inline-block;
+}
+
+section .form .form-row .input-container .input-list-item:first-child{
+	margin-left: 120px;
+}
+
+section .form .form-row .input-container .input-list-item.cell1 .error-message{
+	left: 305px;
+}
+
+section .form .form-row .input-container .error-message{
+	position: absolute;
+	bottom: -19px;
+	left: 185px;
+	color: #C0352E;
+	width: 100%;
+}
+
+/* Completed message */
+section.completed-message{
+	margin: 60px auto;
+	width: 720px;
+	background: #77DD77;
+	color: #fff;
+	padding: 15px 0px;
+}
+
+section.completed-message p{
+	width: 100%;
+	text-align: center;
+}
+

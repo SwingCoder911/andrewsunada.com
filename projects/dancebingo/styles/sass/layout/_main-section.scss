@@ -1,0 +1,24 @@
+.tab-content{
+	.empty{
+		width: 100%;
+		text-align: center;
+		padding: 10%;
+		img{
+			width: 25%;
+		}
+	}
+}
+.bingo-actions{
+	width: 100%;
+	position: relative;
+	text-align: center;
+	margin: 3vh auto;
+	overflow: hidden;
+	float: left;
+	
+	.bingo-submit{
+		width: 25vw;
+		min-width: 300px;
+		padding: 3vh 0;
+	}
+}

@@ -1,0 +1,10 @@
+header{
+	height: $header-height;
+	background: #CCC;
+	h1{
+		float: left;
+		line-height: 39px;
+		margin: #{($header-height - 39px) / 2} 0;
+		padding: 0;
+	}
+}

@@ -1,0 +1,20 @@
+nav{
+	.nav.nav-pills{
+		margin: 3vh 0;
+		& > li{
+			@include calc-dimension(width, 50%, 2px, 49px);
+			text-align: center;
+			&.active{
+				& > a, & > a:hover, & > a:active, & > a:focus{
+					background-color: transparent;
+					color: #337ab7;
+				}			
+			}
+			a{		
+				background-color: #337ab7;
+				color: #FFF;	
+				border-radius: 0;					
+			}		
+		}
+	}	
+}

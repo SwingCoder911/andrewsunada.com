@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Dance Bingo</title>
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" type="text/css" href="styles/generated/main.css" />
+		<script type="text/javascript" src="scripts/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+		<script type="text/javascript" src="scripts/angular.min.js"></script>
+		<script type="text/javascript" src="scripts/main.js"></script>
+	</head>
+	<body ng-app="DanceBingo" ng-controller="WinnersController">
+		<header >
+			<div class="container">
+				<h1>US Open Bingo</h1>
+			</div>			
+		</header>
+		<section class="container">
+			<ul class="winners">
+				<li ng-repeat="winner in winners">
+					<p class="name" ng-bind="winner.name"></p>
+					<ul class="pattern">
+						<li ng-repeat="piece in winner.bingo" ng-bind="piece"></li>
+					</ul>
+					<p class="name" ng-bind="winner.name"></p>
+				</li>
+			</ul>
+		</section>
+	</body>
+</html>

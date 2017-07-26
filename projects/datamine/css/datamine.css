@@ -1,0 +1,162 @@
+body{
+	margin: 0px;
+}
+p, ul{
+	margin: 0px;
+	padding: 0px;
+	font-family: arial, sans-serif;
+}
+
+ul{
+	list-style-type: none;
+}
+
+a{
+	color: #fff;
+}
+
+.clear{
+	clear: both;
+}
+
+.center{
+	margin: 0px auto;
+}
+
+/* Center page mining form */
+.mining-form.initial{
+	width: 205px;
+	color: #0B709E;
+	padding: 10px 190px;
+	margin: 200px auto;
+	position: relative;
+}
+
+.mining-form.initial .field{
+	margin: 5px 0px;
+	border: 1px solid #0B709E;
+	padding: 3px;
+}
+
+.mining-form.initial > .field{
+	width: 80%;
+}
+
+.mining-form.initial button, .mining-form.initial p{
+	margin: 5px 0px;
+}
+
+.mining-form.initial button{
+	background: #0B709E;
+	border: none;
+	color: #fff;
+	padding: 5px 15px;
+	cursor: pointer;
+}
+
+.mining-form.initial .action{
+	width: 84%;
+	margin: 5px 0px;
+	display: block;
+}
+
+.mining-form img.loading-bar{
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	width: 100%;
+	height: 8px;
+	display: none;
+}
+
+/* Header mining form */
+.mining-form.upper{
+	width: 100%;
+	margin: 0px;
+	padding: 15px 10px;
+	background: #0B709E;
+	color: #fff;
+	text-align: center;
+}
+
+.mining-form.upper .field{
+	background: #0B709E;
+	border: 1px solid #18B9E7;
+	color: #18B9E7;
+	padding: 3px;
+}
+
+.mining-form.upper p.title{
+	display: none;
+}
+
+.mining-form.upper button.action{
+	background: #18B9E7;
+	color: #0B709E;
+	border: 1px solid #18B9E7;
+	padding: 3px 10px;
+	cursor: pointer;
+}
+
+.mining-form .field.error{
+	border: 2px solid #E74B3C;
+}
+
+.messages{
+	margin-top: 10px;
+	width: 500px;
+	color: #fff;
+	padding: 10px;
+	display: none;
+}
+
+.messages.success{
+	background: #1ABC9C;
+}
+
+.messages.error{
+	background: #E74B3C;
+}
+
+.export{
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	margin: 15px;
+}
+
+.export a{
+	margin-left: 10px;
+}
+
+.export.initial a{
+	color: #0B709E;
+}
+
+.export.upper a{
+	color: #18B9E7;
+}
+
+/* Results container */
+.results-container table{
+	width: 90%;
+  	margin: 0px auto;
+  	border-collapse: collapse;
+}
+.results-container table tr.header th{
+	border-bottom: 1px solid #0B709E;
+}
+.results-container table th{
+	color: #0B709E;
+}
+.results-container table th, .results-container table td{
+	width: 12%;
+}
+
+.ui-autocomplete{
+	background: #fff;
+	border: 1px solid #0B709E;
+	color: #0B709E;
+}
+
+.ui-helper-hidden-accessible { display:none; }

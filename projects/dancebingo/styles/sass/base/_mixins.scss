@@ -1,0 +1,6 @@
+@mixin calc-dimension($dimension, $initial, $offset, $default){
+	#{$dimension}: $default;
+	#{$dimension}: -webkit-calc(#{$initial} - #{$offset});
+	#{$dimension}: -moz-calc(#{$initial} - #{$offset});
+	#{$dimension}: calc(#{$initial} - #{$offset});
+}

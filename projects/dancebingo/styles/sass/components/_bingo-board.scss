@@ -1,0 +1,78 @@
+.bingo-grid{
+	width: 100%;
+
+	&.complete{
+		color: #CCC;
+		.column .cell{
+			border-color: #CCC;
+			&.selected{
+				p{
+					color: #FFF;
+				}
+			}
+			p{
+				color: #CCC;
+			}
+		}
+	}
+	.column{
+		width: 20%;
+		height: 100%;
+		float: left;
+		&:first-child{
+			.cell{
+				border-left: 1px solid #DDD;
+				&:first-child{
+					border-radius: 4px 0 0 0;
+				}
+				&:last-child{
+					border-radius: 0 0 0 4px;
+				}
+			}
+		}
+		&:last-child{
+			.cell{
+				&:first-child{
+					border-radius: 0 4px 0 0;
+				}
+				&:last-child{
+					border-radius: 0 0 4px 0;
+				}
+			}
+		}
+		.cell{
+			border: 1px solid #DDD;
+			border-left: 0;
+			border-bottom: 0;
+			width: 100%;
+			height: 100px;
+			line-height: 100px;
+			text-align: center;
+			cursor: pointer;
+			&:last-child{
+				border-bottom: 1px solid #DDD;
+			}
+			&.selected{
+				background: #CCC;
+			}
+
+			&.bingo{
+				background: #333;
+				p{
+					color: #FFF;
+				}
+			}
+
+			p{
+				width: 100%;
+				display: inline-block;
+				vertical-align: middle;
+				line-height: normal;
+				font-size: 10px;
+				@media (min-width: 700px){
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}

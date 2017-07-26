@@ -1,0 +1,101 @@
+ul, p, h1, h2, h3 {
+  margin: 0; }
+
+ul {
+  list-style-type: none; }
+
+body {
+  font-family: 'Sans Serif', helvetica;
+  font-size: 16px; }
+
+body, html {
+  height: 100vh; }
+
+html {
+  background: url("../images/basic-weather-background.jpg") no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+body {
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.15);
+  color: white; }
+
+.header {
+  text-align: center;
+  padding-top: 3vh;
+  color: #FFF;
+  font-weight: bold; }
+
+.page-content {
+  width: 65%;
+  min-width: 800px;
+  margin: 20vh auto;
+  display: flex;
+  align-items: center; }
+
+.weather-view {
+  flex: 7;
+  min-height: 25rem;
+  font-size: 1.5em;
+  background: rgba(0, 0, 0, 0.3); }
+  .weather-view .form {
+    padding: 5rem 0 0 0; }
+    .weather-view .form .update-label {
+      text-align: center;
+      width: 100%;
+      display: inline-block;
+      margin: 1rem auto .5rem auto;
+      font-weight: normal; }
+    .weather-view .form .input-container {
+      display: block;
+      width: 200px;
+      position: relative;
+      margin: .5rem auto 1rem auto; }
+      .weather-view .form .input-container .update-input {
+        display: inline-block;
+        width: auto; }
+      .weather-view .form .input-container .error {
+        display: inline-block;
+        font-size: .5em;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 100%;
+        width: 100%; }
+        .weather-view .form .input-container .error:before {
+          content: "*"; }
+    .weather-view .form .update-action {
+      display: block;
+      margin: 0 auto; }
+
+.weather-display {
+  position: relative;
+  text-align: center;
+  padding: 3rem 0; }
+  .weather-display .edit-icon {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    border: none;
+    background: none; }
+  .weather-display .weather-item {
+    display: block;
+    margin: 1rem auto;
+    line-height: 1em;
+    font-size: 1em; }
+  .weather-display .not-found {
+    margin: 7rem 0; }
+
+.loading-container {
+  padding: 8rem; }
+  .loading-container .loading {
+    width: 8rem;
+    display: block;
+    margin: 0 auto; }
+
+.difference {
+  flex: 1;
+  text-align: center; }
+
+/*# sourceMappingURL=weather.css.map */

@@ -1,0 +1,16 @@
+@import "vendors/bootstrap";
+
+@import "base/variables";
+@import "base/reset";
+
+@import "layout/header";
+@import "layout/main-content";
+
+@import "areas/comp-list";
+@import "areas/comp";
+@import "areas/vote";
+@import "areas/message";
+@import "areas/scoreboard";
+@import "areas/login";
+
+@import "components/couple";

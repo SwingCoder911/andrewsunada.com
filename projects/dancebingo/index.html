@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Dance Bingo</title>
+		<meta name="viewport" content="width=device-width" />
+		<link rel="stylesheet" type="text/css" href="styles/generated/main.css" />
+		<script type="text/javascript" src="scripts/jquery-3.1.1.min.js"></script>
+		<script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+		<script type="text/javascript" src="scripts/angular.min.js"></script>
+		<script type="text/javascript" src="scripts/typeahead.js"></script>
+		<script type="text/javascript" src="scripts/main.js"></script>
+	</head>
+	<body ng-app="DanceBingo" ng-controller="BingoController">
+		<header >
+			<div class="container">
+				<h1>TAP Bingo</h1>
+			</div>			
+		</header>
+		<nav class="container">
+			<ul class="nav nav-pills">
+				<li class="active"><a data-toggle="tab" href="#play-area">Play!</a></li>
+				<li ><a data-toggle="tab" href="#score-area" ng-click="loadScoreboard()">Score board</a></li>
+			</ul>
+		</nav>
+		<section class="tab-content container">
+			<div id="play-area" class="bingo-area tab-pane active" >
+				<div class="bingo-grid" ng-class="{'complete': hasBingo()}" ng-show="!loaders.board">
+					<div ng-repeat="row in selectedGrid" class="column">
+						<div ng-repeat="cell in row" class="cell" ng-click="selectCell($parent.$index, $index)" ng-class="{selected: isCellSelected($parent.$index, $index), bingo: isPartOfBingo($parent.$index, $index)}">
+							<p ng-bind="cell"></p>
+						</div>				
+					</div>
+				</div>
+				<div class="bingo-grid empty" ng-show="loaders.board" ng-cloak>
+					<img class="loading-img" src="/projects/dancebingo/images/spinner.gif"/>
+				</div>
+				<div class="bingo-actions">
+					<button type="button" class="btn bingo-submit" ng-class="{'btn-primary': hasBingo(), 'btn-secondary': !hasBingo()}" ng-disabled="!hasBingo()" data-toggle="modal" data-target="#bingo-modal">Bingo!</button>	
+				</div>
+				<!-- Modal -->
+				<div id="bingo-modal" class="modal fade" role="dialog">
+				  <div class="modal-dialog">
+
+				    <!-- Modal content-->
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal">&times;</button>
+				        <h4 class="modal-title">Bingo!</h4>
+				      </div>
+				      <div class="modal-body">
+				        <h3>Great job!</h3>
+				        <h4>Record your win if you want!</h4>
+				        <div class="form-row">
+					        <label>Name:</label>
+					        <input ng-model="user.name" class="form-control typeahead name" />
+				        </div>
+				        <div class="form-row">
+					        <label>Location:</label>
+					        <input ng-model="user.location" class="form-control typeahead location" />
+				        </div>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-secondary" ng-click="resetBoard()" data-dismiss="modal">Reset</button>
+				        <button type="button" class="btn btn-primary" ng-click="recordBingo()" data-dismiss="modal">Record</button>
+				      </div>
+				    </div>
+
+				  </div>
+				</div>			
+			</div>
+			<div id="score-area" class="bingo-area tab-pane fade" >
+				<button class="btn btn-secondary refresh-button" data-toggle="modal" data-target="#refresh-modal">Refresh list</button>
+				<ul class="winners list-group" ng-show="!loaders.winners && winners.length > 0">
+					<li ng-repeat="winner in winners" class="list-group-item">
+						<div class="list-group-item-head" data-toggle="collapse" role="button" data-target="#winner-{{$index}}">
+							<span class="glyphicon glyphicon-plus"></span>
+							<h4 class="name list-group-item-heading" ng-bind="winner.name"></h4>
+							<p class="location list-group-item-text" ng-bind="winner.location"></p>	
+						</div>						
+						<div class="collapse" id="winner-{{$index}}">
+							<ul class="pattern-set list-group">
+								<li class="list-group-item" ng-repeat="item in winner.pattern">
+									<span class="glyphicon">-</span>
+									<p ng-bind="item"></p>
+								</li>
+							</ul>
+						</div>
+					</li>
+				</ul>
+				<h3 class="empty-rows" ng-show="!loaders.winners && winners.length == 0">No winners.</h3>
+				<div class="bingo-area empty" ng-show="loaders.winners" ng-cloak>
+					<img class="loading-img" src="/projects/dancebingo/images/spinner.gif"/>
+				</div>
+				<!-- Modal -->
+				<div id="refresh-modal" class="modal fade" role="dialog">
+				  <div class="modal-dialog">
+
+				    <!-- Modal content-->
+				    <div class="modal-content">
+				      <div class="modal-header">
+				        <button type="button" class="close" data-dismiss="modal">&times;</button>
+				        <h4 class="modal-title">Refresh list</h4>
+				      </div>
+				      <div class="modal-body">
+				        <div class="form-row">
+					        <label>Password:</label>
+					        <input ng-model="refresh.pwd" class="form-control pwd-input" />
+					        <div class="refresh-action">
+					        	<button class="btn btn-primary" ng-click="attemptRefresh()">Refresh</button>
+					        	<p class="error" ng-show="refresh.error">*Invalid Password</p>
+					        </div>
+				        </div>
+				      </div>
+				      <div class="modal-footer">
+				        <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>				        
+				      </div>
+				    </div>
+
+				  </div>
+				</div>	
+			</div>
+			
+		</section>
+		
+	</body>
+</html>

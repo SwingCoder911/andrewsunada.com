@@ -1,0 +1,21 @@
+<div class="main-content voter-area" ng-show="!voterController.Loading && !voterController.Empty">
+    <div class="placement-row">
+        <label class="control-label">1st Place:</label>
+        <select class="placement-select" ng-options="couple.Id as (couple.Partner1 + ' & ' + couple.Partner2) for couple in voterController.Selections.First | coupleListFilter:voterController.Placements.Second:voterController.Placements.Third" ng-model="voterController.Placements.First" ></select>
+    </div>
+    <div class="placement-row">
+        <label class="control-label">2nd Place:</label>
+        <select class="placement-select" ng-options="couple.Id as (couple.Partner1 + ' & ' + couple.Partner2) for couple in voterController.Selections.Second | coupleListFilter:voterController.Placements.First:voterController.Placements.Third" ng-model="voterController.Placements.Second" ></select>
+    </div>
+    <div class="placement-row">
+        <label class="control-label">3rd Place:</label>
+        <select class="placement-select" ng-options="couple.Id as (couple.Partner1 + ' & ' + couple.Partner2) for couple in voterController.Selections.Third | coupleListFilter:voterController.Placements.First:voterController.Placements.Second" ng-model="voterController.Placements.Third" ></select>
+    </div>
+    <button class="btn submit-vote" ng-click="voterController.SubmitVotes()" ng-class="{'btn-primary': voterController.CanVote()}">Vote</button>
+</div>
+<div class="main-content voter-area" ng-show="!voterController.Loading && voterController.Empty">
+    <p class="empty-text">No competition is available right now. <br/>Please come back later!</p>
+</div>
+<div class="main-content voter-area" ng-show="voterController.Loading">
+    <img class="loading" src="/rcs-voter/images/loading.gif"/>
+</div>

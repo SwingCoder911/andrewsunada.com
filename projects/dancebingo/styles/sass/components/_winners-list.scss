@@ -1,0 +1,73 @@
+h2{
+	width: 100%;
+	text-align: center;
+}
+
+.bingo-area{
+	.empty-rows{
+		text-align: center;
+	}
+}
+
+.list-group-item-head{
+	height: 42px;
+	&[aria-expanded = 'true']{
+		border-bottom: 1px solid #DDD;
+		padding-bottom: 10px;
+		.glyphicon{
+			-ms-transform: rotate(-45deg); /* IE 9 */
+		    -webkit-transform: rotate(-45deg); /* Chrome, Safari, Opera */
+		    transform: rotate(-45deg);	
+		}		
+	}
+	&[aria-expanded = 'false']{
+		.glyphicon{
+			-ms-transform: rotate(0); /* IE 9 */
+		    -webkit-transform: rotate(0); /* Chrome, Safari, Opera */
+		    transform: rotate(0);
+		}		
+	}
+	.glyphicon{
+		float: right;
+		font-size: 40px;
+		transition: ease .5s;
+	}	
+}
+
+.winners .pattern-set{
+	.list-group-item{
+		border: none;
+		position: relative;
+		.glyphicon{
+			position: absolute;
+			top: 25%;
+			left: 0;
+		}		
+	}
+}
+
+.refresh-button{
+	width: 100%;
+	margin-bottom: 3vh;
+}
+
+#refresh-modal{
+	.pwd-input{
+		margin-bottom: 5px;
+	}
+	.pwd-not-passed{
+		display: none;
+	}
+	.refresh-action{
+		overflow: hidden;
+		.btn-primary{
+			float: left;
+		}
+		.error{
+			margin-left: 5px;
+			float: left;
+			line-height: 34px;
+		}
+	}
+}
+

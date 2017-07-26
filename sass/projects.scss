@@ -1,0 +1,67 @@
+@import "base/variables";
+@import "base/mixins";
+@import "base/reset";
+
+.projects-wrapper{
+    width: 100%;
+    background: #DADAD9;
+    color: $primary-colour;
+
+    .projects-container{
+        width: 55%;
+        min-width: 40em;
+        margin: 0 auto;
+    }
+
+    .project-list{
+        width: 100%;
+
+        li{
+            width: 100%;
+            display: block;
+            overflow: hidden;
+            margin: 3em 0;
+            border-left: 3px solid $primary-colour-complement;
+
+            a{
+                display: block;
+                float: left;
+                
+                 img{
+                     width: 8em;
+                     height: 8em;
+                     display: block;
+                 }
+            }   
+            a.project-cell{
+                width: 20%;
+            }         
+            .project-item-description{
+                width: 80%;
+            }
+        }
+
+        .project-cell{
+            float: left;
+            position: relative;
+
+            .project-item-image{
+                margin: 0 1em;
+            }
+
+            .description-header{
+                margin: 0;
+            }
+            .project-github-icon{
+                position: absolute;
+                right: 1em;
+                top: 1em;
+                img{
+                    display: block;
+                    width: 3em;
+                    height: 3em;
+                }
+            }
+        }
+    }
+}
