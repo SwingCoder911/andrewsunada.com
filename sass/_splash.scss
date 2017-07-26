@@ -36,3 +36,11 @@ section.splash-area{
 		}
 	}
 }
+
+.nav-link{
+	position: absolute;
+	top: 1em;
+	right: 1em;
+	font-size: 14px;
+	color: $primary-colour-complement;
+}

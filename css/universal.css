@@ -122,6 +122,13 @@ section.splash-area {
     section.splash-area .focus:hover {
       text-decoration: underline; }
 
+.nav-link {
+  position: absolute;
+  top: 1em;
+  right: 1em;
+  font-size: 14px;
+  color: #B69E6D; }
+
 div.center {
   background: rgba(0, 0, 0, 0.7);
   padding: 5px 0px;

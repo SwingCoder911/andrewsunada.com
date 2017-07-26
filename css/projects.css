@@ -31,10 +31,14 @@ ul {
       display: block;
       overflow: hidden;
       margin: 3em 0;
-      border-left: 3px solid #B69E6D; }
+      border-left: 3px solid #B69E6D;
+      background: rgba(182, 158, 109, 0.5);
+      padding: 1em 0;
+      position: relative; }
       .projects-wrapper .project-list li a {
         display: block;
-        float: left; }
+        float: left;
+        min-width: 8em; }
         .projects-wrapper .project-list li a img {
           width: 8em;
           height: 8em;
@@ -42,21 +46,21 @@ ul {
       .projects-wrapper .project-list li a.project-cell {
         width: 20%; }
       .projects-wrapper .project-list li .project-item-description {
-        width: 80%; }
+        width: 75%; }
+        .projects-wrapper .project-list li .project-item-description .description-content {
+          width: 80%;
+          margin: .5em 0; }
     .projects-wrapper .project-list .project-cell {
-      float: left;
-      position: relative; }
-      .projects-wrapper .project-list .project-cell .project-item-image {
+      float: left; }
+      .projects-wrapper .project-list .project-cell.project-item-image {
         margin: 0 1em; }
       .projects-wrapper .project-list .project-cell .description-header {
         margin: 0; }
       .projects-wrapper .project-list .project-cell .project-github-icon {
         position: absolute;
-        right: 1em;
-        top: 1em; }
+        right: 0;
+        top: 0; }
         .projects-wrapper .project-list .project-cell .project-github-icon img {
-          display: block;
-          width: 3em;
-          height: 3em; }
+          display: block; }
 
 /*# sourceMappingURL=projects.css.map */

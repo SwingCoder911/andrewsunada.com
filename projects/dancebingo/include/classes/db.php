@@ -1,10 +1,11 @@
 <?php
+require_once("./config.php");
 date_default_timezone_set ('America/Los_Angeles');
 class BingoDB{
-	public $servername = "gothams-elephant.andrewsunada.com";
-	public $username = "kaleb2azriel";
-	public $password = "elephant1ngotham";
-	public $dbname = "projects_swing";	
+	public $servername = SERVERNAME;
+	public $username = USERNAME;
+	public $password = PASSWORD;
+	public $dbname = DBNAME;	
 	private $conn = null;
 	private $err = false;
 	function __construct(){

@@ -1,9 +1,9 @@
 <?php
 class VoterDB{
-    private $hostname = "box933.bluehost.com";
-    private $db_name = "swingda2_event";
-    private $db_user = "swingda2_batman";
-    private $db_pw = "swingda2_rcs";
+    private $hostname = "";
+    private $db_name = "";
+    private $db_user = "";
+    private $db_pw = "";
 
     private $conn = null;
 	private $err = false;

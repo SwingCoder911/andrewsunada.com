@@ -10,6 +10,7 @@
 		<link rel="stylesheet" type="text/css" href="/css/universal.css" />
 	</head>
 	<body class="splash">
+		<a href="/projects.html" class="nav-link">Workshop</a>
 		<section class="splash-area">
 			<p class="primary">Welcome to the my Bat Cave.</p>
 			<p class="secondary">Welcome to the Elephant in the room.</p>

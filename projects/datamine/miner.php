@@ -1,7 +1,7 @@
 <?php
 require_once("config.php");
 class Miner{
-	const API_KEY='AIzaSyDRi-sb8QEs2W7ie3vGuzRO-sQaFE4qkOI';
+	const API_KEY = API_KEY;
 	const CURL_GET = 'GET';
 	const CURL_POST = 'POST';
 
