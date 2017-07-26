@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 html{
   background: url("../images/basic-weather-background.jpg") no-repeat;
   background-size: cover;
@@ -31,11 +32,36 @@ body{
 
   .form{
     padding: 5rem 0 0 0;
+=======
+.header{
+  text-align: center;
+}
+
+.page-content{
+  width: 75%;
+  min-width: 800px;
+  margin: 5rem auto;
+  display: flex;
+}
+
+.page-content-item{
+
+}
+
+.weather-view{
+  border: 1px solid black;
+  flex: 20;
+  min-height: 25rem;
+
+  .form{
+    padding: 5rem 0;
+>>>>>>> Stashed changes
     .update-label{
       text-align: center;
       width: 100%;
       display: inline-block;
       margin: 1rem auto .5rem auto;
+<<<<<<< Updated upstream
       font-weight: normal;
     }
     .input-container{
@@ -61,11 +87,22 @@ body{
       }
     }
 
+=======
+    }
+    .update-input{
+      display: block;
+      margin: .5rem auto 1rem auto;
+      width: auto;
+    }
+>>>>>>> Stashed changes
     .update-action{
       display: block;
       margin: 0 auto;
     }
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
   }
 }
 .weather-display{
@@ -76,18 +113,24 @@ body{
     position: absolute;
     top: 1rem;
     right: 1rem;
+<<<<<<< Updated upstream
     border: none;
     background: none;
+=======
+>>>>>>> Stashed changes
   }
 
   .weather-item{
     display: block;
     margin: 1rem auto;
+<<<<<<< Updated upstream
     line-height: 1em;
     font-size: 1em;
   }
   .not-found{
     margin: 7rem 0;
+=======
+>>>>>>> Stashed changes
   }
 }
 .loading-container{
@@ -100,5 +143,8 @@ body{
 }
 .difference{
   flex: 1;
+<<<<<<< Updated upstream
   text-align: center;
+=======
+>>>>>>> Stashed changes
 }

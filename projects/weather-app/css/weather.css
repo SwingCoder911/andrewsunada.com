@@ -8,6 +8,7 @@ body {
   font-family: 'Sans Serif', helvetica;
   font-size: 16px; }
 
+<<<<<<< Updated upstream
 body, html {
   height: 100vh; }
 
@@ -41,10 +42,28 @@ body {
   background: rgba(0, 0, 0, 0.3); }
   .weather-view .form {
     padding: 5rem 0 0 0; }
+=======
+.header {
+  text-align: center; }
+
+.page-content {
+  width: 75%;
+  min-width: 800px;
+  margin: 5rem auto;
+  display: flex; }
+
+.weather-view {
+  border: 1px solid black;
+  flex: 20;
+  min-height: 25rem; }
+  .weather-view .form {
+    padding: 5rem 0; }
+>>>>>>> Stashed changes
     .weather-view .form .update-label {
       text-align: center;
       width: 100%;
       display: inline-block;
+<<<<<<< Updated upstream
       margin: 1rem auto .5rem auto;
       font-weight: normal; }
     .weather-view .form .input-container {
@@ -65,6 +84,13 @@ body {
         width: 100%; }
         .weather-view .form .input-container .error:before {
           content: "*"; }
+=======
+      margin: 1rem auto .5rem auto; }
+    .weather-view .form .update-input {
+      display: block;
+      margin: .5rem auto 1rem auto;
+      width: auto; }
+>>>>>>> Stashed changes
     .weather-view .form .update-action {
       display: block;
       margin: 0 auto; }
@@ -76,6 +102,7 @@ body {
   .weather-display .edit-icon {
     position: absolute;
     top: 1rem;
+<<<<<<< Updated upstream
     right: 1rem;
     border: none;
     background: none; }
@@ -86,6 +113,12 @@ body {
     font-size: 1em; }
   .weather-display .not-found {
     margin: 7rem 0; }
+=======
+    right: 1rem; }
+  .weather-display .weather-item {
+    display: block;
+    margin: 1rem auto; }
+>>>>>>> Stashed changes
 
 .loading-container {
   padding: 8rem; }
@@ -95,7 +128,11 @@ body {
     margin: 0 auto; }
 
 .difference {
+<<<<<<< Updated upstream
   flex: 1;
   text-align: center; }
+=======
+  flex: 1; }
+>>>>>>> Stashed changes
 
 /*# sourceMappingURL=weather.css.map */
