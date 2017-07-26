@@ -15,7 +15,7 @@
 			<p class="secondary">Welcome to the Elephant in the room.</p>
 			<a class="focus" href="/Resume.pdf" target="_blank">Resume</a>
 		</section>
-		<footer class="footer">
+		<footer class="footer row3">
 			<div class="social-container"></div>
 		</footer>
 	</body>
