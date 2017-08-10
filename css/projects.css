@@ -1,7 +1,11 @@
+@font-face {
+  font-family: noway-regular-webfont;
+  src: url(/fonts/noway-regular-webfont.eot);
+  src: url(/fonts/noway-regular-webfont.ttf); }
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Open Sans', sans-serif; }
+  font-family: noway-regular-webfont, 'Open Sans', sans-serif; }
 
 p, li, ul {
   margin: 0px;
@@ -42,7 +46,8 @@ ul {
         .projects-wrapper .project-list li a img {
           width: 8em;
           height: 8em;
-          display: block; }
+          display: block;
+          margin: 0 auto; }
       .projects-wrapper .project-list li a.project-cell {
         width: 20%; }
       .projects-wrapper .project-list li .project-item-description {
