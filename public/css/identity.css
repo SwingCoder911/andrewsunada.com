@@ -26,7 +26,8 @@ body {
     border-top-left-radius: 100%;
     border-bottom-left-radius: 100%;
     border-bottom-right-radius: 100%;
-    transform: rotate(67.5deg); }
+    transform: rotate(67.5deg);
+    box-sizing: border-box; }
   .main__inner-2 {
     position: absolute;
     top: 0;
@@ -40,7 +41,8 @@ body {
     border-top-left-radius: 100%;
     border-bottom-left-radius: 100%;
     border-bottom-right-radius: 100%;
-    transform: rotate(22.5deg); }
+    transform: rotate(22.5deg);
+    box-sizing: border-box; }
   .main__inner-line {
     position: absolute;
     top: 50%;
@@ -62,6 +64,12 @@ body {
     padding: 1em 0.5em;
     margin: 0;
     font-size: 36px; }
+    .main__inner-text--bottom {
+      position: relative; }
+      .main__inner-text--bottom textPath {
+        font-family: 'Trebuchet MS', Helvetica, sans-serif;
+        font-size: 24px;
+        fill: black; }
 
 .name {
   position: absolute;
@@ -69,9 +77,12 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 180px;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.6);
   text-transform: uppercase; }
   .name p:first-child {
     margin-bottom: 0.1em; }
   .name p:last-child {
     margin-top: 0.1em; }
+
+.arc {
+  fill: #1b1b1b; }

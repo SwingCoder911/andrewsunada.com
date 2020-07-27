@@ -32,7 +32,9 @@ body {
     border-bottom-left-radius: 100%;
     border-bottom-right-radius: 100%;
     transform: rotate(67.5deg);
+    box-sizing: border-box;
   }
+
   &__inner-2 {
     position: absolute;
     top: 0;
@@ -42,12 +44,14 @@ body {
     height: 100%;
     border-bottom: 10px solid black;
     border-left: 10px solid black;
-    // border-right: 1px solid black;
+    // border-right: 10px solid black;
+    // border-top: 10px solid black;
     border-top-right-radius: 100%;
     border-top-left-radius: 100%;
     border-bottom-left-radius: 100%;
     border-bottom-right-radius: 100%;
     transform: rotate(22.5deg);
+    box-sizing: border-box;
   }
   &__inner-line {
     position: absolute;
@@ -72,6 +76,15 @@ body {
     padding: 1em 0.5em;
     margin: 0;
     font-size: 36px;
+
+    &--bottom {
+      position: relative;
+      textPath {
+        font-family: 'Trebuchet MS', Helvetica, sans-serif;
+        font-size: 24px;
+        fill: black;
+      }
+    }
   }
 }
 
@@ -81,7 +94,7 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 180px;
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.6);
   text-transform: uppercase;
 
   p {
@@ -92,4 +105,8 @@ body {
       margin-top: 0.1em;
     }
   }
+}
+
+.arc {
+  fill: $background-colour;
 }
