@@ -1,0 +1,25 @@
+{
+  "name": "andrewsunada.com",
+  "version": "0.0.1",
+  "description": "andrewsunada.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index.js",
+    "scss": "node-sass --watch styles -o public/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SwingCoder911/andrewsunada.com.git"
+  },
+  "author": "Andrew Sunada <andrew@andrewsunada.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SwingCoder911/andrewsunada.com/issues"
+  },
+  "homepage": "https://github.com/SwingCoder911/andrewsunada.com#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "node-sass": "^4.14.1"
+  }
+}
