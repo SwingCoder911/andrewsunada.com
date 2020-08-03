@@ -1,5 +1,4 @@
 const D3 = d3 || {};
-console.log('found D3: ', D3);
 var svg = D3.selectAll('.main')
   .append('svg')
   .attr('width', '100%')
@@ -33,3 +32,18 @@ svg
   .style('text-anchor', 'middle')
   .attr('xlink:href', '#identity-arc')
   .text('Ephesians 2:10');
+
+window.onload = () => {
+  const titles = document.querySelectorAll('.header__title');
+  for (let i = 0, len = titles.length; i < len; i += 1) {
+    titles[i].addEventListener('click', function (e) {
+      const container = this.parentNode;
+      const expandedClass = 'expanded';
+      if (container.classList.contains(expandedClass)) {
+        container.classList.remove(expandedClass);
+      } else {
+        container.classList.add(expandedClass);
+      }
+    });
+  }
+};
