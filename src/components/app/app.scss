@@ -1,0 +1,196 @@
+// TODO: Move this to global scss
+$background-colour: #00171f;
+$light-blue: #00a8e8;
+$medium-blue: #007ea7;
+$dark-blue: #003459;
+$radius: 5px;
+
+@font-face {
+  font-family: lobster;
+  src: url('../../shared/fonts/Lobster-Regular.ttf');
+}
+body {
+  background: $background-colour;
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  font-family: Arial, Helvetica, sans-serif;
+  // height: 100vh;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+a {
+  color: $light-blue;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    border-bottom: 1px solid $light-blue;
+  }
+}
+
+.main {
+  width: 600px;
+  height: 600px;
+  margin: 0 auto;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  .inner1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-bottom: 10px solid black;
+    border-left: 10px solid black;
+    // border-right: 1px solid black;
+    border-top-right-radius: 100%;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    transform: rotate(67.5deg);
+    box-sizing: border-box;
+  }
+
+  .inner2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-bottom: 10px solid black;
+    border-left: 10px solid black;
+    // border-right: 10px solid black;
+    // border-top: 10px solid black;
+    border-top-right-radius: 100%;
+    border-top-left-radius: 100%;
+    border-bottom-left-radius: 100%;
+    border-bottom-right-radius: 100%;
+    transform: rotate(22.5deg);
+    box-sizing: border-box;
+  }
+  .inner-line {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    display: block;
+    width: 85%;
+    height: 8px;
+    background: black;
+  }
+
+  .inner-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    background: $background-colour;
+    color: black;
+    text-transform: uppercase;
+    padding: 1em 0.5em;
+    margin: 0;
+    font-size: 36px;
+
+    &-bottom {
+      position: relative;
+      textPath {
+        font-family: 'Trebuchet MS', Helvetica, sans-serif;
+        font-size: 24px;
+        fill: black;
+      }
+    }
+  }
+}
+
+.arc {
+  fill: $background-colour;
+}
+
+.name {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: lobster;
+  font-weight: normal;
+  font-size: 180px;
+  color: #fff; //rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+
+  p {
+    &:first-child {
+      margin-bottom: 0.1em;
+    }
+    &:last-child {
+      margin-top: 0.1em;
+    }
+  }
+}
+
+.nav-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+  height: 100vh;
+
+  .nav-list {
+    align-items: flex-start;
+    padding-left: 3em;
+  }
+}
+
+.nav-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 20vw;
+  height: 100vh;
+
+  .nav-list {
+    align-items: flex-end;
+    padding-right: 3em;
+  }
+}
+
+.button {
+  border: 1px solid $medium-blue;
+  color: $medium-blue;
+  background: transparent;
+  font-size: 2em;
+  border-radius: 5em;
+  padding: 0.5em;
+  cursor: pointer;
+}
+
+.nav-list {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 1.5em;
+
+  li {
+    margin: 1em 0;
+  }
+}
