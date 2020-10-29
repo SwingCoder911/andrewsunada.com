@@ -4,7 +4,7 @@ import styles from './app.scss';
 
 const projectList = [
   { label: 'Houses to Homes', url: 'https://housestohomesresidential.com/' },
-  { label: 'WCSConnect', url: 'https://wcsconnect.com/' },
+  // { label: 'WCSConnect', url: 'https://wcsconnect.com/' },
   // {
   //   label: 'Black History is US History',
   //   url: 'https://blackhistoryisushistory.com/',

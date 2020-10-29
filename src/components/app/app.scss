@@ -9,6 +9,12 @@ $radius: 5px;
   font-family: lobster;
   src: url('../../shared/fonts/Lobster-Regular.ttf');
 }
+
+@font-face {
+  font-family: josefin;
+  src: url('../../shared/fonts/JosefinSlab-Regular.ttf');
+}
+
 body {
   background: $background-colour;
   margin: 0;
@@ -122,7 +128,7 @@ a {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-family: lobster;
+  font-family: josefin;
   font-weight: normal;
   font-size: 180px;
   color: #fff; //rgba(255, 255, 255, 0.6);
